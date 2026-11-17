@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi Event</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="form-card">
+            <header class="form-header">
+                <span class="label-top">EVENT NASIONAL 2026</span>
+                <h1>Form Registrasi Peserta</h1>
+                <p>Silakan isi data diri Anda untuk mendaftar ke acara seminar teknologi.</p>
+                <p class="required-info">* Wajib diisi</p>
+            </header>
+
+            <!-- enctype multipart/form-data wajib ada karena form memuat file upload -->
+            <form action="/proses-registrasi" method="post" enctype="multipart/form-data">
+                
+                <!-- Nama Lengkap (Aturan Validasi 1) -->
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap *</label>
+                    <input type="text" id="nama" name="nama" minlength="3" maxlength="50" placeholder="Contoh: Budi Santoso" required>
+                    <small>Minimal 3 karakter, maksimum 50 karakter.</small>
+                </div>
+
+                <!-- Email (Aturan Validasi 2) -->
+                <div class="form-group">
+                    <label for="email">Email Aktif *</label>
+                    <input type="email" id="email" name="email" placeholder="budi@email.com" required>
+                    <small>Gunakan email aktif untuk pengiriman e-ticket.</small>
+                </div>
+
+                <!-- Select Dropdown - Kategori Tiket (Aturan Validasi 3) -->
+                <div class="form-group">
+                    <label for="kategori">Kategori Tiket *</label>
+                    <select id="kategori" name="kategori" required>
+                        <option value="">-- Pilih Kategori Tiket --</option>
+                        <option value="student">Student (Pelajar/Mahasiswa)</option>
+                        <option value="regular">Regular Professional</option>
+                        <option value="vip">VIP Access</option>
+                    </select>
+                </div>
+
+                <!-- Radio Button - Sesi Kehadiran -->
+                <fieldset>
+                    <legend>Sesi Kehadiran *</legend>
+                    <div class="option">
+                        <input type="radio" id="sesi1" name="sesi_kehadiran" value="pagi" required>
+                        <label for="sesi1">Sesi Pagi (09:00 - 12:00)</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="sesi2" name="sesi_kehadiran" value="siang">
+                        <label for="sesi2">Sesi Siang (13:30 - 16:30)</label>
+                    </div>
+                </fieldset>
+
+                <!-- Checkbox - Workshop Tambahan -->
+                <fieldset>
+                    <legend>Workshop Tambahan (Opsional)</legend>
+                    <p class="instruction">Anda dapat memilih lebih dari satu.</p>
+                    <div class="option">
+                        <input type="checkbox" id="ws_ai" name="workshop[]" value="ai">
+                        <label for="ws_ai">Generative AI Workshop</label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" id="ws_cloud" name="workshop[]" value="cloud">
+                        <label for="ws_cloud">Cloud Architecture Basics</label>
+                    </div>
+                </fieldset>
+
+                <!-- Textarea - Alasan/Catatan -->
+                <div class="form-group">
+                    <label for="catatan">Catatan / Kebutuhan Khusus</label>
+                    <textarea id="catatan" name="catatan" rows="4" maxlength="200" placeholder="Tuliskan jika ada alergi makanan atau kebutuhan disabilitas..."></textarea>
+                    <small>Maksimal 200 karakter.</small>
+                </div>
+
+                <!-- Upload File - Bukti Pembayaran (Aturan Validasi 4) -->
+                <div class="form-group">
+                    <label for="pembayaran">Upload Bukti Pembayaran *</label>
+                    <input type="file" id="pembayaran" name="pembayaran" accept=".jpg, .jpeg, .png, .pdf" required>
+                    <small>Format yang diizinkan: JPG, PNG, atau PDF.</small>
+                </div>
+
+                <!-- Checkbox Persetujuan -->
+                <div class="agreement">
+                    <input type="checkbox" id="persetujuan" name="persetujuan" value="setuju" required>
+                    <label for="persetujuan">Saya menyatakan data yang diisi sudah benar dan mematuhi aturan event. *</label>
+                </div>
+
+                <!-- Tombol Navigasi Form -->
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">Kirim Pendaftaran</button>
+                    <button type="reset" class="btn btn-secondary">Reset Form</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

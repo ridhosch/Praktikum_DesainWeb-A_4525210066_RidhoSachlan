@@ -1,0 +1,252 @@
+/* --- Pengaturan Dasar & Variabel Warna --- */
+:root {
+    --primary-color: #2db1b1;
+    --primary-hover: #195a63;
+    --bg-color: #dfdfdf;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #cbd5e1;
+    --border-focus: #2db1b1;
+    --error-color: #125c69;
+    --radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding: 40px 20px;
+}
+
+/* --- Layout Kontainer Utama --- */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-card {
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Header Form --- */
+.form-header {
+    margin-bottom: 30px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 20px;
+}
+
+.label-top {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.form-header h1 {
+    font-size: 1.75rem;
+    color: var(--text-main);
+    margin-bottom: 8px;
+}
+
+.form-header p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.required-info {
+    color: var(--error-color) !important;
+    font-size: 0.85rem !important;
+    margin-top: 6px;
+}
+
+/* --- Grup Form & Elemen Input --- */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    color: var(--text-main);
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+    color: var(--text-main);
+    background-color: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Keterangan kecil di bawah input */
+.form-group small {
+    display: block;
+    margin-top: 6px;
+    color: var(--text-muted);
+    font-size: 0.825rem;
+}
+
+/* --- Fieldset untuk Radio & Checkbox Group --- */
+fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+}
+
+legend {
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0 8px;
+    color: var(--text-main);
+}
+
+.instruction {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.option:last-child {
+    margin-bottom: 0;
+}
+
+.option input[type="radio"],
+.option input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.option label {
+    font-size: 0.95rem;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+/* --- File Upload Khusus --- */
+input[type="file"] {
+    padding: 10px 0;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/* --- Persetujuan (Agreement Checkbox) --- */
+.agreement {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+    background-color: #f1f5f9;
+    padding: 15px;
+    border-radius: var(--radius);
+}
+
+.agreement input[type="checkbox"] {
+    margin-right: 12px;
+    margin-top: 3px;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.agreement label {
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: var(--text-main);
+}
+
+/* --- Tombol Aksi (Button Group) --- */
+.button-group {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    flex: 2;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+    background-color: #e2e8f0;
+    color: #475569;
+    flex: 1;
+}
+
+.btn-secondary:hover {
+    background-color: #cbd5e1;
+}
+
+/* --- Responsif untuk HP (Layar Kecil) --- */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .form-card {
+        padding: 20px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+}
