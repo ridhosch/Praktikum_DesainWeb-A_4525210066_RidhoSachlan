@@ -1,0 +1,104 @@
+/* ==========================================
+   CUSTOM THEME (LOGISTICS STYLE)
+   ========================================== */
+:root {
+    --brand-primary: #0f4c81;
+    --brand-primary-dark: #072a4a;
+    --brand-accent: #f59e0b;
+    --brand-background: #f8fafc;
+    --brand-surface: #ffffff;
+    --brand-text: #1e293b;
+    --brand-muted: #64748b;
+    --brand-radius: 12px;
+}
+
+/* ==========================================
+   GLOBAL
+   ========================================== */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--brand-background);
+    color: var(--brand-text);
+    line-height: 1.6;
+}
+
+/* ==========================================
+   NAVBAR
+   ========================================== */
+.brand-navbar {
+    background-color: var(--brand-primary);
+}
+
+/* ==========================================
+   LABEL
+   ========================================== */
+.section-label {
+    display: block;
+    color: var(--brand-primary);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+    margin-bottom: 7px;
+}
+
+/* ==========================================
+   DASHBOARD CARD
+   ========================================== */
+.dashboard-card {
+    border: 0;
+    border-radius: var(--brand-radius);
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ==========================================
+   CUSTOM BUTTON
+   ========================================== */
+.btn-brand {
+    background-color: var(--brand-primary);
+    border-color: var(--brand-primary);
+    color: white;
+}
+
+.btn-brand:hover {
+    background-color: var(--brand-primary-dark);
+    border-color: var(--brand-primary-dark);
+    color: white;
+}
+
+/* ==========================================
+   FORM
+   ========================================== */
+.form-control:focus {
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 0 0.2rem rgba(15, 76, 129, 0.15);
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+.brand-footer {
+    background-color: var(--brand-primary-dark);
+    color: white;
+}
+
+/* ==========================================
+   SECTION SPACING
+   ========================================== */
+.registration-section {
+    padding: 30px 0;
+}
+
+@media (min-width: 768px) {
+    .registration-section {
+        padding: 50px 0;
+    }
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastTrack Delivery - Solusi Logistik & Pengiriman Terpercaya</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ========================================== NAVBAR ========================================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark brand-navbar sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">FastTrack Delivery</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLogistics"
+                aria-controls="navbarLogistics" aria-expanded="false" aria-label="Buka menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarLogistics">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#beranda">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#layanan">Layanan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#lacak">Lacakan Paket</a>
+                    </li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================== HERO SECTION ========================================== -->
+    <header id="beranda" class="container py-5">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-4 mb-5">
+            <div>
+                <span class="section-label">LOGISTICS & DELIVERY</span>
+                <h1 class="display-5 fw-bold mb-2">Pengiriman Cepat, Aman, dan Terpercaya</h1>
+                <p class="text-secondary mb-0">Solusi pengiriman barang domestik dan internasional untuk kebutuhan
+                    personal maupun bisnis Anda.</p>
+            </div>
+            <div>
+                <button class="btn btn-brand btn-lg" data-bs-toggle="modal" data-bs-target="#modalPesan">
+                    Kirim Paket Sekarang
+                </button>
+            </div>
+        </div>
+
+        <!-- Alert Promosi -->
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Promo Spesial!</strong> Nikmati diskon ongkir hingga 30% untuk layanan Regular & Express Delivery
+            bulan ini.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Tutup"></button>
+        </div>
+    </header>
+
+    <!-- ========================================== LAYANAN (STATISTIC / SERVICE CARDS) ========================================== -->
+    <section id="layanan" class="container mb-5">
+        <div class="mb-4">
+            <span class="section-label">LAYANAN KAMI</span>
+            <h2 class="h3 fw-bold">Pilihan Jasa Pengiriman</h2>
+        </div>
+
+        <div class="row g-4">
+            <!-- Card 1: Same Day Delivery -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card service-card h-100 border-0 p-4 rounded-4">
+                    <!-- Ganti bagian ini dengan tag gambar Anda sendiri -->
+                    <div class="mb-3">
+                        <img src="https://jubelio.com/wp-content/uploads/2023/12/jubelio-blog-jubelio-shipment-1-2048x1366.jpg"
+                            alt="Same Day Delivery" class="img-fluid service-img">
+                    </div>
+                    <h3 class="h5 fw-bold mb-2">Same Day Delivery</h3>
+                    <p class="text-muted mb-0">Layanan pengiriman khusus agar paket tiba di hari yang sama demi
+                        efisiensi maksimal.</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Regular Delivery -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card service-card h-100 border-0 p-4 rounded-4">
+                    <div class="mb-3">
+                        <img src="https://www.papandayancargo.com/wp-content/uploads/2023/08/Jasa-Layanan-Logistik.webp"
+                            alt="Regular Delivery" class="img-fluid service-img">
+                    </div>
+                    <h3 class="h5 fw-bold mb-2">Regular Delivery</h3>
+                    <p class="text-muted mb-0">Pengiriman reguler dengan jangkauan luas ke seluruh wilayah dengan harga
+                        ekonomis.</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Express Delivery -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card service-card h-100 border-0 p-4 rounded-4">
+                    <div class="mb-3">
+                        <img src="https://ndecargo.co.id/wp-content/uploads/2025/09/Jenis-Jenis-Layanan-Logistik-Klasik-1024x683.jpg"
+                            alt="Express Delivery" class="img-fluid service-img">
+                    </div>
+                    <h3 class="h5 fw-bold mb-2">Express Delivery</h3>
+                    <p class="text-muted mb-0">Pengiriman cepat untuk paket mendesak yang membutuhkan penanganan
+                        prioritas.</p>
+                </div>
+            </div>
+
+            <!-- Card 4: Cargo Service -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card service-card h-100 border-0 p-4 rounded-4">
+                    <div class="mb-3">
+                        <img src="https://kailogistik.id/assets/upload/image/publikasi/img_news_1761877017-69dfbc0757.JPG"
+                            alt="Cargo Service" class="img-fluid service-img">
+                    </div>
+                    <h3 class="h5 fw-bold mb-2">Cargo Service</h3>
+                    <p class="text-muted mb-0">Solusi pengiriman barang berukuran besar, berat, atau berjumlah banyak
+                        secara aman.</p>
+                </div>
+            </div>
+
+            <!-- Card 5: International Shipping -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card service-card h-100 border-0 p-4 rounded-4">
+                    <div class="mb-3">
+                        <img src="https://dwmajan.com/img/loadingun.jpeg" alt="International Shipping"
+                            class="img-fluid service-img">
+                    </div>
+                    <h3 class="h5 fw-bold mb-2">International Shipping</h3>
+                    <p class="text-muted mb-0">Pengiriman paket lintas negara dengan jaringan mitra global terpercaya.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 6: Tracking Service -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="card service-card h-100 border-0 p-4 rounded-4">
+                    <div class="mb-3">
+                        <img src="https://www.scnlogisticgroup.com/wp-content/uploads/2022/01/layanan-logistik.png"
+                            alt="Tracking Service" class="img-fluid service-img">
+                    </div>
+                    <h3 class="h5 fw-bold mb-2">Tracking Service</h3>
+                    <p class="text-muted mb-0">Fitur pemantauan kiriman interaktif untuk mengecek posisi paket secara
+                        akurat.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================== LACAK / FORM CEK RESI ========================================== -->
+        <section id="lacak" class="registration-section container mb-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8">
+                    <div class="card border-0 shadow">
+                        <div class="card-body p-4 p-md-5">
+                            <span class="section-label">LACAK PAKET</span>
+                            <h2 class="h3 fw-bold">Cek Status Pengiriman</h2>
+                            <p class="text-secondary">Masukkan nomor resi atau kode tracking untuk melihat status paket
+                                Anda.</p>
+
+                            <form
+                                onsubmit="event.preventDefault(); alert('Fitur pelacakan simulasi berhasil dijalankan!');">
+                                <div class="mb-3">
+                                    <label for="resi" class="form-label">Nomor Resi / Tracking ID *</label>
+                                    <input type="text" class="form-control" id="resi" name="resi"
+                                        placeholder="Contoh: FT-2026-00891" required>
+                                </div>
+                                <button type="submit" class="btn btn-brand">
+                                    Lacak Sekarang
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== MODAL PESAN ========================================== -->
+        <div class="modal fade" id="modalPesan" tabindex="-1" aria-labelledby="judulModalPesan" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-5" id="judulModalPesan">Pesan Layanan Pengiriman</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Silakan pilih jenis layanan dan lengkapi detail pengiriman Anda melalui sistem pemesanan
+                            kami.
+                        </p>
+                        <div class="alert alert-info mb-0">Kurir kami siap menjemput paket Anda langsung ke lokasi!
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                        <button type="button" class="btn btn-brand" data-bs-dismiss="modal"
+                            onclick="alert('Formulir pemesanan akan segera dibuka.');">Lanjut Pesan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========================================== FOOTER ========================================== -->
+        <footer id="kontak" class="brand-footer py-4 mt-5">
+            <div class="container text-center">
+                <p class="mb-1 fw-bold">FastTrack Delivery Logistics Company</p>
+                <p class="mb-0 text-white-50">&copy; 2026 Seluruh Hak Cipta Dilindungi.</p>
+            </div>
+        </footer>
+
+        <!-- Bootstrap Bundle -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
